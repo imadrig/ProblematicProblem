@@ -137,9 +137,22 @@ namespace ProblematicProblem
                         Console.WriteLine();
 
                         Console.WriteLine("Would you like to add more? yes/no: ");
+                        string userMoreActivities = Console.ReadLine();
+                        userMoreActivities = userMoreActivities.ToLower();
+
+                        if (userMoreActivities == "yes" || userMoreActivities == "y")
+                        {
+                            
+                            addToList = true;
+                        }
+                        else
+                        {
+                            
+                            addToList = false;
+                        }
 
 
-                    }
+                }
                 }
 
                 while (cont)
@@ -185,7 +198,7 @@ namespace ProblematicProblem
                     }
                     else if (userOkayForActivity == "redo")
                     {
-                        Console.WriteLine("Ok, lelt's start again.");
+                        Console.WriteLine("Ok, let's start again.");
                         redoActivity = false;
 
 
